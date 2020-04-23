@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5e802ee81b1cdb5734949209"},"name":"Primer Portafolio","description":"Primer Portafolio Juan Pablo Brenes","category":"Diseño Web","langs":"Jquery-Css","year":2019,"image":"AHFZnQTRoiqCPPW06oHkNUsq.PNG","__v":0}
+{"_id":{"$oid":"5e8158d07745c45a94be3a65"},"name":"Tienda Mascotas","description":"Curso Ambiente Web Cliente-Servidor","category":"Desarrollo Web","langs":"PHP-JQUERY","year":2019,"image":"gF-47BLRZo6LJQ5M3K--ZoM3.jpg","__v":0}
+{"_id":{"$oid":"5e8780db472c2a334cb60265"},"name":"Practica de Javascript","description":"Cambiador de Temas con Jquery","category":"Diseno y desarrollo","langs":"Javascript Jquery","year":2020,"image":"9M6Kxs-mv_gvJU8mZy9ipoAa.jpg","__v":0}
+{"_id":{"$oid":"5e87a4da472c2a334cb60266"},"name":"Ultima prueba","description":"Angular SPA","category":"Spa Backend","langs":"Node","year":2020,"image":"UenU60rFAObR3x2DQyvyYMnE.png","__v":0}

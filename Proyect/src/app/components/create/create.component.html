@@ -1,0 +1,53 @@
+<div class="container" *ngIf="project">
+  <h2>{{title}}</h2>
+
+  <div class="estado" *ngIf="status=='succes'">
+    El proyecto se ha creado Correctamente, puedes verlo <a [routerLink]="['/proyecto/', savedproject._id]">aquí</a>
+  </div>
+  <div class="estado" *ngIf="status=='fail'">
+    El proyecto No se ha creado
+  </div>
+<form #frmcreate="ngForm" (ngSubmit)="onSubmit(frmcreate)">
+
+  <p><label for="name">Name:</label></p>
+  <p><input type="text" name="name" #fname="ngModel" [(ngModel)]="project.name" required pattern="[A-Za-z-\s]+"></p>
+
+  <span *ngIf="fname.touched && !fname.valid">Name Required</span>
+
+
+  <p><label for="description">Description:</label></p>
+  <textarea name="description" #fdescription="ngModel" [(ngModel)]="project.description" required pattern="[A-Za-z-\s]+"></textarea>
+<br>
+<span *ngIf="fdescription.touched && !fdescription.valid">Description Required</span>
+
+  <p><label for="category">Category:</label></p>
+  <p><input type="text" name="category" #fcategory="ngModel" [(ngModel)]="project.category" required pattern="[A-Za-z-\s]+"></p>
+<span *ngIf="fcategory.touched && !fcategory.valid">Category Required</span>
+
+  <p><label for="year">Year:</label></p>
+  <p><input type="number" name="year" #fyear="ngModel" [(ngModel)]="project.year" required pattern="[0-9]+"></p>
+<span *ngIf="fyear.touched && !fyear.valid">Year Required</span>
+
+  <p><label for="langs">Technologies:</label></p>
+  <p><input type="text" name="langs" #flangs="ngModel" [(ngModel)]="project.langs" required></p>
+<span *ngIf="flangs.touched && !flangs.valid">Technologies Required</span>
+
+
+  <label for="image">Image:</label>
+
+  <span *ngIf="project.image" style="float:none;">
+
+      <img class="image" src="{{url+'/loadimage/'+project.image}}" style="width:250px, height:12px;" >
+
+  </span>
+
+
+  <input type="file" name="image" (change)="fileChange($event)"/>
+
+
+
+
+  <p><input type="submit" value="Send" [disabled]=!frmcreate.form.valid ngClass="test"></p>
+</form>
+
+</div>

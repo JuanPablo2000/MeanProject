@@ -1,0 +1,15 @@
+<header>
+  <ul>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['actived']">About</a></li>
+    <li><a [routerLink]="['/jquery']" [routerLinkActive]="['actived']">Jquery</a></li>
+    <li class="logo"><a href="">JB</a></li>
+    <li><a [routerLink]="['/createproyect']" [routerLinkActive]="['actived']">Create Proyect</a></li>
+    <li><a [routerLink]="['/proyects']" [routerLinkActive]="['actived']">Proyects</a></li>
+  </ul>
+</header>
+<section id="content">
+<router-outlet></router-outlet>
+</section>
+<footer>
+Curso Udemy Mean Stack- Juan Pablo Brenes
+</footer>
